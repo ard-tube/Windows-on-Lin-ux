@@ -8,8 +8,8 @@ A high-performance wrapper designed to run Windows binaries on Linux environment
 - Automated environment configuration for high-resource software.
 
 ## System Requirements ⚙️
-- **OS:** Linux (Zorin OS / Ubuntu / Debian recommended).
-- **GPU:** NVIDIA RTX series (Optimized for 70W RTX 2050).
+- **OS:** Linux (/ Ubuntu / Debian / arch linux "Ubuntu" is recommended).
+- **GPU:** NVIDIA OR AMD series (Optimized for AMD.
 - **RAM:** Minimum 8GB recommended for stable execution.
 
 ## Quick Installation 🚀
