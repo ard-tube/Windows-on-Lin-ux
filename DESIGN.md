@@ -1,43 +1,12 @@
-# Design Documentation
+# Design Document
 
-## System Workflow Diagrams
+## Objective
+To provide a lightweight, efficient bridge for running Windows applications on Linux with native NVIDIA GPU support.
 
-- Include detailed diagrams that describe the system workflows used in the application.
+## Component Breakdown
+1. **Frontend (Python/Tkinter):** Provides a simple GUI for file selection and execution monitoring.
+2. **Backend (Bash Script):** Handles environment variables and interacts with the Wine compatibility layer.
+3. **Graphics Engine:** Utilizes NVIDIA PRIME offloading for RTX 2050 performance.
 
-## Component Descriptions
-
-- **Component 1**: Description of the first component and its responsibilities.
-- **Component 2**: Description of the second component and its responsibilities.
-- **Component 3**: Description of the third component and its responsibilities.
-
-## Visual ASCII Representations of the Application Flow
-
-```
-   +----------------+
-   |                |
-   |   Start        |
-   |                |
-   +-------+--------+
-           |
-           v
-   +----------------+
-   |                |
-   |   Component 1  |
-   |                |
-   +-------+--------+
-           |
-           v
-   +----------------+
-   |                |
-   |   Component 2  |
-   |                |
-   +-------+--------+
-           |
-           v
-   +----------------+
-   |                |
-   |   End          |
-   |                |
-   +----------------+  
-```
-
+## Data Flow
+User Interface -> .exe Path Capture -> Bash Wrapper -> Environment Variable Export -> Wine Execution.
