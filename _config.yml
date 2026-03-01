@@ -1,0 +1,21 @@
+# Jekyll Configuration for GitHub Pages
+
+# Site settings
+name: Your Site Name
+
+# Title that appears in the header
+title: Your Site Title
+
+# Author
+author:
+  name: Your Name
+  email: your_email@example.com
+
+# Description
+description: "A description of your site."
+
+# URL
+url: "https://yourusername.github.io/your-repository"
+
+# Build settings
+theme: minima
