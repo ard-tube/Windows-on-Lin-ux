@@ -1,61 +1,39 @@
-# Windows on Linux 🐧
+# Windows on Linux Bridge 🐧
+
+A high-performance wrapper designed to run Windows binaries on Linux environments using Wine and NVIDIA hardware acceleration.
 
 ## Features 🌟
-- Run Windows applications on Linux seamlessly.
-- Lightweight and efficient performance.
-- User-friendly interface with easy navigation.
+- Seamless execution of Windows applications (.exe).
+- Native NVIDIA GPU acceleration (Optimized for RTX 2050 series).
+- Automated environment configuration for high-resource software.
 
 ## System Requirements ⚙️
-- **OS:** Linux (Ubuntu/Debian recommended)
-- **RAM:** Minimum 4GB
-- **Disk Space:** 20GB free space
+- **OS:** Linux (Zorin OS / Ubuntu / Debian recommended).
+- **GPU:** NVIDIA RTX series (Optimized for 70W RTX 2050).
+- **RAM:** Minimum 8GB recommended for stable execution.
 
 ## Quick Installation 🚀
 1. Update your package list:
-   ```bash
-   sudo apt update
-   ```
-2. Install the required dependencies:
-   ```bash
-   sudo apt install package-name
-   ```
-3. Download the setup file:
-   ```bash
-   wget http://example.com/setup-file
-   ```
-4. Run the installer:
-   ```bash
-   ./setup-file
-   ```
+   `sudo apt update`
+2. Install Wine dependencies:
+   `sudo dpkg --add-architecture i386 && sudo apt install wine64 wine32`.
+3. Clone this repository and grant permissions:
+   `chmod +x run-windows-on-linux.sh`.
 
 ## Usage Guide 📚
-To start the application, run:
-```bash
-./application-name
-```
+To launch a Windows application with GPU offloading, run:
+`./run-windows-on-linux.sh /path/to/your/application.exe`.
 
 ## Project Structure 📂
-```
-- src/          # Source files
-- docs/         # Documentation files
-- tests/        # Test files
-- README.md     # This readme file
-```
+- `src/`: Core Python and Shell logic.
+- `docs/`: Technical architecture and design docs.
+- `run-windows-on-linux.sh`: Main entry point script.
 
 ## Supported Applications 📱
-- Microsoft Office Suite
-- Adobe Photoshop
-- Various other Windows applications.
-
-## Configuration ⚙️
-Configuration files can be found in `~/.config/app-name/`. Edit these YAML/JSON files as per your needs.
+- Development Tools
+- Design Software (Adobe Suite via Wine)
+- General Productivity Tools
 
 ## Troubleshooting ⚠️
-- **Common Issues:**
-  - Application fails to launch: Make sure all dependencies are installed.
-  - Performance issues: Check system resources and consider upgrading.
-
-## Community 🤝
-Join our community on [Discord](http://discord-link) for discussions, help, and collaboration. Feel free to contribute to the project by opening issues or pull requests.
-
-Happy building! 🎉
+- **NVIDIA Issues:** Ensure `nvidia-driver` is correctly installed and active.
+- **Launch Failure:** Check if the application requires specific DLL overrides in Wine configuration.
